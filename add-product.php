@@ -1,6 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - E-Commerce Admin</title>
     <?php include "./includes/header.php" ?>
-   <?php include('includes/navbar.php') ?>
+</head>
+<body>
+    <?php include "./includes/navbar.php" ?>
     <div class="container py-5">
         <h2 class="mb-4">Add New Product</h2>
         <form id="addProductForm" enctype="multipart/form-data" novalidate>
@@ -32,4 +39,17 @@
             <button type="submit" class="btn btn-primary">Add Product</button>
         </form>
     </div>
- <?php include('includes.footer.php')?>
+    <?php include "./includes/footer.php" ?>
+    <script>
+        // Simple form validation
+        document.getElementById('addProductForm').addEventListener('submit', function(event) {
+            var form = this;
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    </script>
+</body>
+</html> 

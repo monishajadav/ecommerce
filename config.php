@@ -2,7 +2,7 @@
 $server="localhost";
 $username="root";
 $password="";
-$db="todo";
+$db="ecommerce";
 
 $link=new mysqli($server,$username,$password,$db);
 if ($link->connect_error){

@@ -10,6 +10,7 @@
                     <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php"><i class="bi bi-person-circle"></i> Login</a></li>
+                     <li class="nav-item"><a class="nav-link active" href="cart.html"><i class="bi bi-cart"></i> Cart</a></li>
                 </ul>
             </div>
         </div>
