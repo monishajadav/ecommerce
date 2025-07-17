@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - E-Commerce</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <?php include "./includes/header.php" ?>
+
     <style>
         body {
             background: linear-gradient(135deg, #f8fafc 0%, #e0eafc 100%);
@@ -23,8 +23,9 @@
     </style>
 </head>
 <body>
-  <?php include('includes/navbar.php') ?>
-    </nav>
+    <!-- Navbar -->
+    <?php include "./includes/navbar.php" ?>
+
     <div class="container py-5">
         <h2 class="mb-4 fw-bold text-center"><i class="bi bi-cart"></i> Shopping Cart</h2>
         <div class="row g-4">
@@ -86,6 +87,8 @@
             </div>
         </div>
     </div>
-   <?php include('includes/footer.php') ?>
+    <!-- Footer -->
+    <?php include "./includes/footer.php" ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 

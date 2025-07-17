@@ -4,23 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product - E-Commerce Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+    <?php include "./includes/header.php" ?></head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">E-Commerce</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage-product.html">Manage Products</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        
+    <?php include "./includes/navbar.php" ?>
+
     <div class="container py-5">
         <h2 class="mb-4">Edit Product</h2>
         <form id="editProductForm" enctype="multipart/form-data" novalidate>
@@ -52,7 +40,7 @@
             <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <?php include "./includes/footer.php" ?>
     <script>
         // Simple form validation
         document.getElementById('editProductForm').addEventListener('submit', function(event) {
