@@ -2,6 +2,7 @@
 require_once "./config.php";
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirmPassword'];
 
@@ -20,11 +21,12 @@ if (isset($_POST['submit'])) {
             </script>";
         } else {
             $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
-            $insert = "INSERT INTO users(username,password) VALUES('$username','$encrypted_password')";
+            $insert = "INSERT INTO users(username, email, password) VALUES('$username', '$email', '$encrypted_password')";
             if (mysqli_query($link, $insert)) {
                 echo "<script>
                 alert('user registered successfully')
             </script>";
+                header("refresh:5");
             } else {
                 echo "<script>
                 alert('failed to register the user')
@@ -33,19 +35,7 @@ if (isset($_POST['submit'])) {
         }
     }
 }
-
-
-
-
-
 ?>
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,14 +71,23 @@ if (isset($_POST['submit'])) {
                 <h2 class="fw-bold mt-2">Create Account</h2>
             </div>
             <form id="registerForm" novalidate action="" method="post">
-                <div class="mb-3">
-                    <label for="registerEmail" class="form-label">Email or Username</label>
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                        <input type="text" class="form-control" id="registerEmail" placeholder="Ente username" name="username" required>
-                        <div class="invalid-feedback">Please enter your email or username.</div>
-                    </div>
+            <div class="mb-3">
+                <label for="registerEmail" class="form-label">Username</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="text" class="form-control" id="registerEmail" placeholder="Enter username" name="username" required>
+                    <div class="invalid-feedback">Please enter your email or username.</div>
                 </div>
+            </div>
+            <div class="mb-3">
+                <label for="registerEmailField" class="form-label">Email</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope-at"></i></span>
+                    <input type="email" class="form-control" id="registerEmailField" placeholder="Enter email" name="email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+            </div>
+
                 <div class="mb-3">
                     <label for="registerPassword" class="form-label">Password</label>
                     <div class="input-group">

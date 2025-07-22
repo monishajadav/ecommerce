@@ -16,6 +16,6 @@
         <h3>Our Team</h3>
         <p>We are a passionate team of developers, designers, and customer service professionals committed to excellence.</p>
     </div>
-<?php include "./includes/footer.php" ?>
+    <?php include "./includes/footer.php" ?>
 </body>
 </html> 

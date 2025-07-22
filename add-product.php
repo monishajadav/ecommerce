@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $name = $_POST['productName'];
     $description = $_POST['productDescription'];
     $category = $_POST['category'];
-    $product_price = $_POST['price'];
+    $price = $_POST['price'];
     $user_id = $_SESSION['id'];
 
     $target_dir = "assets/images/uploads/";
@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
 
     $image_path = $target_file;
 
-    $insert = "INSERT INTO product(name,image_path,product_price,user_id,description,category) VALUES('$name','$image_path','$product_price','$user_id','$description','$category')";
+    $insert = "INSERT INTO products(name,image_path,price,user_id,description,category) VALUES('$name','$image_path','$price','$user_id','$description','$category')";
 
     if(mysqli_query($link,$insert)){
          echo "<script>

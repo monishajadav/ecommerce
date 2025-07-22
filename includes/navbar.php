@@ -12,16 +12,14 @@
                     <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
                     <li class="nav-item"><a class="nav-link" href="checkout.php">Checkout</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="delete-product.php">delete-product</a></li>
-                    <li class="nav-item"><a class="nav-link" href="edit-product.php">edit-product</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage-product.php">manage-product</a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manageproduct.php">manage-product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registration.php">Register</a></li>
                     <?php 
                     
                     if(empty($_SESSION['id'])){
-                        echo '<li class="nav-item"><a class="nav-link" href="login.php"><i class="bi bi-person-circle"></i>Login</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="login.php"><i class="bi bi-person-circle"></i>Log In</a></li>';
                     } else {
-                        echo '<li class="nav-item"><a class="nav-link" href="logout.php"><i class="bi bi-person-circle"></i>Logout</a></li>'; 
+                        echo '<li class="nav-item"><a class="nav-link" href="logout.php"><i class="bi bi-person-circle"></i>Log Out</a></li>'; 
                     }
                     
                     ?>
